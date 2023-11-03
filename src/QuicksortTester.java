@@ -12,4 +12,7 @@ public class QuicksortTester extends SortTester {
     this.sorter = Quicksort.SORTER;
   } // QuicksortTester()
 
+
+  
+
 } // class QuicksortTester
