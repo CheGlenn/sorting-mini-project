@@ -31,7 +31,10 @@ public class InsertionSort implements Sorter {
   // | Methods |
   // +---------+
 
-
+  /*
+   * InsertionSort algorithim, loops through an array, comparing values and re ordering when necessary
+   * pre: Array, comparator
+   */
    @Override
   public <T> void sort(T[] values, Comparator<? super T> order) {
     for(int i = 1; i < values.length; i++){ //loop through array

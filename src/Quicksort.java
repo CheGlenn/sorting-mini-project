@@ -40,9 +40,11 @@ public class Quicksort implements Sorter {
     T temp = arr[i];
     arr[i] = arr[j];
     arr[j] = temp;
-}
-
-  public  <T> int partition(T[] values, int lb, int ub, Comparator<? super T> comparator){
+  }
+  /*
+   * Partition finds and returns the index for a partition value, and sorts the array around that value
+   */
+  public <T> int partition(T[] values, int lb, int ub, Comparator<? super T> comparator){
     
     int pivot = lb + (ub-lb)/2; //set pivot as midpoint
 
@@ -66,7 +68,9 @@ public class Quicksort implements Sorter {
     return small-1; //return position of the pivot
 
   }
-
+  /*
+   * Main quick sort function, checks if array is sorted and calls quickSort method
+   */
   @Override
   public <T> void sort(T[] values, Comparator<? super T> order) {
 
@@ -80,6 +84,9 @@ public class Quicksort implements Sorter {
 
   } // sort(T[], Comparator<? super T>
 
+  /*
+   * checks if there are values still to be sorted, and recursively calls quickSort on unsorted halves of the array
+   */
   public <T> void quickSort(T[] values, Comparator<? super T> order, int lb, int ub){
 
     if(lb >= ub-1){ //check if there are values left to be sorted
